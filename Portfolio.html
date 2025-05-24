@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio Website</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5%;
+            height: 52px;
+            background-color: rgb(2, 2, 49);
+        }
+
+        nav .left {
+            font-size: 1.6rem;
+            color: rgba(82, 194, 242, 0.903);
+            padding-left: 120px;
+        }
+
+        nav .right ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav .right ul li a {
+            text-decoration: none;
+            color: rgb(13, 197, 13);
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav .right ul li a:hover {
+            color: lightgreen;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 0;
+            padding: 0 5%;
+        }
+
+        .leftsection {
+            width: 40%;
+        }
+
+        .leftsection p {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        #element {
+            color: rgb(228, 165, 110);
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .rightsection {
+            width: 40%;
+            text-align: center;
+        }
+
+        .rightsection img {
+            width: 80%;
+            max-width: 300px;
+        }
+
+        hr {
+            border: 1.1px solid rgba(231, 226, 226, 0.466);
+            margin: 40px 5%;
+        }
+
+        .secondsection {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+
+        .child1,
+        .child2,
+        .child3 {
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .child1 {
+            background-color: #1e1e3f;
+        }
+
+        .child1 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .child1 ul li {
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 2px 14px;
+            border-radius: 8px;
+            color: white;
+            animation: colorWave 3s infinite;
+        }
+
+        /* Staggered delays for waterfall effect */
+        .child1 ul li:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .child1 ul li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .child1 ul li:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .child1 ul li:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .child1 ul li:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes colorWave {
+            0% {
+                color: rgb(53, 179, 221);
+            }
+
+            25% {
+                color: rgb(158, 80, 231);
+            }
+
+            50% {
+                color: rgb(77, 77, 209);
+            }
+
+            75% {
+                color: rgb(11, 76, 187);
+            }
+
+            100% {
+                color: rgb(95, 12, 137);
+            }
+        }
+
+        .child2 {
+            background-color: #2a2a55;
+        }
+
+        .child2 h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.6rem;
+        }
+
+        .child2 ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .child2 ul li {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .child3 {
+            grid-column: 1 / span 2;
+            background-color: #1a1a2e;
+            text-align: center;
+        }
+
+        .child3 h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .child3 a {
+            display: inline-block;
+            margin: 10px 15px;
+            color: #66d9ef;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .child3 a:hover {
+            color: #50fa7b;
+        }
+
+        @media (max-width: 768px) {
+            .parent {
+                grid-template-columns: 1fr;
+            }
+
+            .child3 {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="left">Mr. Harsh Vadher</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                <p>
+                    <span
+                        style="font-style: italic; font-family: Georgia, 'Times New Roman', Times, serif;">Welcome!</span>
+                    <br />
+                    I'm Specialised in :
+                </p>
+                <span id="element">Cisco Networking engineer , Software Developer , Web Developer</span>
+            </div>
+            <div class="rightsection">
+                <img src="myNeed.img" alt="Computer Engineer" />
+            </div>
+        </section>
+
+        <hr />
+
+        <section class="secondsection">
+            <div class="child1">
+                <p style="padding-left: 35%; font-size: 14.2px;">What I've learnt so far...</p>
+                <ul>
+                    <li>Cisco CCNA exam</li>
+                    <li>Python Programming & DSA</li>
+                    <li>Web Development</li>
+                    <li>Java Programming & DSA</li>
+                    <li>App Dev</li>
+                    <li>Cloud Computing</li>
+                </ul>
+            </div>
+            <div class="child2">
+                <h3>Work Experience</h3>
+                <ul>
+                    <li>Network administrator at ABC Corp.<t>2019-2025</t></li>
+                    <li>Web Developer at Bosch Corp. <t>2015-2017</t></li>
+                    <li>App Developer at Bosch Corp. <t>2017-2018</t></li>
+                    <li>Cloud Practioner <t>2025-</t></li>
+                </ul>
+            </div>
+            <div class="child3">
+                <a href="https://leetcode.com/u/Harsh_Vadher/" target="_blank">Leetcode</a>
+                <a href="https://twitter.com/" target="_blank">Twitter</a>
+                <a href="https://instagram.com/" target="_blank">Instagram</a>
+                <a href="https://facebook.com/" target="_blank">Facebook</a>
+                <a href="https://github.com/" target="_blank">GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Typed.js for text animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Cisco CCNA.', 'AWS Cloud Computing Practitioner.', 'Web Developer.', 'App Developer.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
